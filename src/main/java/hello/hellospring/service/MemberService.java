@@ -9,13 +9,13 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service
+//@Service //DI
 public class MemberService {
 
     private final MemberRepository memberRepository;
 
     //new 해서 매번 생성되는 것이 아니라 외부에서 넣어주도록 설정해야함
-    @Autowired
+    //@Autowired //DI
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
