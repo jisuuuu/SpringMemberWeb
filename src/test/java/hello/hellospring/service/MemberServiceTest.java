@@ -12,6 +12,8 @@ import java.util.Optional;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.assertj.core.api.Assertions.*;
 
+// Spring 띄우는 테스트는 시간이 좀 걸리기 때문에 순수 자바 테스트도 진행함
+// 단위 테스트를 진행하는 것이 중요 -> 단위 테스트를 제대로 진행하는 것이 좋은 자바 코드
 class MemberServiceTest {
 
     MemberService memberService;
