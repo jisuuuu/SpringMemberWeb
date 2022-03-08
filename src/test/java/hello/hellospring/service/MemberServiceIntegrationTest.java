@@ -22,7 +22,6 @@ class MemberServiceIntegrationTest {
     @Autowired MemberRepository memberRepository;
 
     @Test
-    @Commit
     void 회원가입() { //실제 동작하는 메소드 아니니까 테스트니까 한글로 써도 괜찮아 -> 직관적이라 오히려 좋아
         //given
         Member member = new Member();
