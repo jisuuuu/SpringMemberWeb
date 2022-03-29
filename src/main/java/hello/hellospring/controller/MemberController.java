@@ -32,6 +32,7 @@ public class MemberController {
     @Autowired //DI : 의존관계를 주입하는 것
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
+        System.out.println("memberService " + memberService.getClass());
     }
 
     @GetMapping("/members/new")
