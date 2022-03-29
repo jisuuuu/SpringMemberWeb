@@ -31,19 +31,10 @@ public class MemberService {
         //과거에는 if로 null 처리를 하였지만 지금은 Optinal로 한 번 감싸서 확인
         //코드가 안 이쁘면 이렇게 할 수 있음
 
-        long start = System.currentTimeMillis();
+        validateDulicateMember(member); //중복회원 검증
 
-        try {
-            validateDulicateMember(member); //중복회원 검증
-
-            memberRepository.save(member);
-            return member.getId();
-        } finally {
-            long finish = System.currentTimeMillis();
-            long timeMs = finish - start;
-
-            System.out.println("join = " + timeMs + "ms");
-        }//이거 다 언제하고 있음? ㅠㅠ
+        memberRepository.save(member);
+        return member.getId();
     }
 
     private void validateDulicateMember(Member member) {
